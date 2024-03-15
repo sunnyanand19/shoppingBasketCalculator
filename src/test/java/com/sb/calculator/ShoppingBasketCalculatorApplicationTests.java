@@ -1,4 +1,4 @@
-package com.sb.calculator.shoppingBasketCalculator;
+package com.sb.calculator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
