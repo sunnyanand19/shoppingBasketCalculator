@@ -38,9 +38,7 @@ public class PriceCalculator {
 
 
   private static Map<String, Long> groupItems(List<String> cart) {
-    if (cart == null) {
-      return null;
-    }
+
     return cart.stream()
         .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
   }
@@ -58,7 +56,7 @@ public class PriceCalculator {
 
 
   private static BigDecimal calculateDiscountedPrice(String key, Long count){
-      Item item = items.get(key);
+     Item item = items.get(key);
      return item.getCalculator().apply(item.getPrice(),count);
   }
 
